@@ -1,0 +1,98 @@
+/* Specifies the body styles */
+body {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+
+    /* Uses Flexbox */
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles for the contents */
+main {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    /* --Use Flexbox-- */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Defines the profile picture styles */
+.profile-pic {
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* Common styles for the Links */
+.links {
+    /* Use Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Styling the individual links */
+.link {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    /* Use Flexbox */
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* Changes the background color when mouse hover the link */
+.link:hover {
+    background-color: #0056b3;
+}
+
+/* Makes H1 font as 'Courier New' */
+.h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 
+    Uses Media query to make the page responsive. 
+    When max width of the page is 600 px, 
+    then changes the follow elements:
+     -the size of profile picture
+     -all links' flex direction: row to column
+     -individual link's padding and background color
+     -h1 to bold and the font family to 'Times New Roman'
+*/
+@media (max-width: 600px) {
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .links{
+        flex-direction: column;
+    }
+
+    .link {
+        padding: 8px;
+        background-color: bisque;
+    }
+
+    .h1{
+        font-family: 'Times New Roman', Times, serif;
+        font: bold;
+    }
+}
+
